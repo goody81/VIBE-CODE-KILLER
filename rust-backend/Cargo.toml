@@ -1,6 +1,28 @@
-[package]
-name = "rust_backend"
+[workspace]
+members = ["core", "api-gateway", "orchestrator", "database", "shared"]
+resolver = "2"
+
+[workspace.package]
 version = "0.1.0"
 edition = "2021"
+authors = ["VIBE-CODE-KILLER Team <team@vibecode.dev>"]
+license = "MIT"
 
-[dependencies]
+[workspace.dependencies]
+actix-web = "4.4"
+actix-ws = "0.2"
+tokio = { version = "1.35", features = ["full"] }
+sqlx = { version = "0.7", features = ["runtime-tokio-native-tls", "postgres", "uuid", "chrono", "json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+uuid = { version = "1.6", features = ["serde", "v4"] }
+jsonwebtoken = "9.2"
+bcrypt = "0.15"
+redis = { version = "0.24", features = ["tokio-comp", "connection-manager"] }
+async-nats = "0.33"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+dotenv = "0.15"
+thiserror = "1.0"
+anyhow = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
