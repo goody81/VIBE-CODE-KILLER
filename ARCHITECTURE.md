@@ -1,2 +1,3 @@
-# System Architecture
-This document provides a complete overview of the system architecture, including components, interactions, and technologies used.
+# Architecture Overview
+
+This document outlines the architecture of the VIBE-CODE-KILLER platform, detailing its components and interactions.
